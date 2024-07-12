@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-evenly">
+    <app-search (search)="onSearch($event)"></app-search>
+    
+    <select (change)="onMealTypeChange($event)" style="height: 35px;" class="form-control w-25 mt-5">
+        <option value="">All Meal Types</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Dinner">Dinner</option>
+        <option value="Snack">Snack</option>
+    </select>
+</div>
+
+<div class="row row-cols-md-3 row-cols-xl-4 justify-content-center">
+    <div *ngFor="let recipe of recipes" class="mb-5">
+        <app-recipe-card [recipe]="recipe"></app-recipe-card>
+    </div>
+</div>
+
+<app-pagination [currentPage]="currentPage" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
+    (pageChange)="onPageChange($event)">
+</app-pagination>

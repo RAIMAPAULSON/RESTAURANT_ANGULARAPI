@@ -1,0 +1,33 @@
+ <!-- <div>
+    <h2>{{ recipe.name }}</h2>
+    <p>Cuisine: {{ recipe.cuisine }}</p>
+    <p>Meal Type: {{ recipe.mealType.join(', ') }}</p>
+    <p>Difficulty: {{ recipe.difficulty }}</p>
+    <p>Rating: {{ recipe.rating }} ({{ recipe.reviewCount }} reviews)</p>
+</div>  -->
+
+
+ <section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image -->
+                     <img class="card-img-top" height="250px" width="250px" src="{{recipe.image}}" alt="..." />
+                     <!-- Product details -->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name -->
+                            <h3 class="fw-bolder">{{ recipe.name }}</h3>
+                             <!-- Product price -->
+                            <p>Cuisine: {{ recipe.cuisine }}</p>
+                            <p>Meal Type: {{ recipe.mealType.join(', ') }}</p>
+                            <p>Difficulty: {{ recipe.difficulty }}</p>
+                            <p>Rating: {{ recipe.rating }} ({{ recipe.reviewCount }} reviews)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 

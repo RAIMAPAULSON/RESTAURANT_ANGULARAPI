@@ -1,0 +1,5 @@
+<div class="text-center">
+    <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1" class="btn btn-primary">Previous</button>
+    <span>{{ currentPage }} / {{ totalPages }}</span>
+    <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages" class="btn btn-primary">Next</button>
+</div>
